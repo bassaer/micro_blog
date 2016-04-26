@@ -18,6 +18,18 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :test
   host = 'rails-tutorial-c9ruby.c9users.io'
   config.action_mailer.default_url_options = { host: host }
+  
+  #Gmail経由で送信
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   :address => 'smtp.gmail.com',
+  #   :port => '587',
+  #   :domain => 'smtp.gmail.com',
+  #   :authentication => :plain,
+  #   :user_name => ENV['SENDGRID_USERNAME'],
+  #   :password => ENV['SENDGRID_PASSWORD'],
+  # }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
